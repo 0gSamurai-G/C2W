@@ -1,0 +1,28 @@
+#include<stdio.h>
+void main(){
+
+        int size,count=0,temp;
+        printf("Enter the size of array:\n");
+        scanf("%d",&size);
+        int arr1[size],arr2[count];
+        printf("Enter the arr1 element:\n");
+        for(int i=0;i<size;i++){
+
+                                                                                                                                                                                               int sum=0;
+                scanf("%d",&arr1[i]);                                                                                                                                                          temp=arr1[i];
+                while(temp>0){
+
+                        sum+=(temp%10);
+                        temp/=10;
+                }if(sum%2==0){
+
+                        count++;
+                        arr2[count-1]=arr1[i];
+                }
+        }printf("\nElement with even digit sum:\n");
+        for(int i=0;i<count;i++){
+
+                printf("%d\n",arr2[i]);
+        }
+
+}
