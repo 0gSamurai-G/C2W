@@ -1,0 +1,34 @@
+#include<stdio.h>
+void main(){
+
+        int size,flag=0,correct=1;
+        printf("Enter the size of array:\n");
+        scanf("%d",&size);
+        while(correct){
+
+                if((size<=0)||(size==size/0)){
+
+                        printf("Invalid input!\nRenter the size of array:\n");
+                        scanf("%d",&size);
+                        getchar();
+                }else{correct=0;}
+        }
+        int arr[size];
+        printf("Enter the arr elements:\n");
+        for(int i=0;i<size;i++){
+
+                        printf("Enter the arr element %d: ",i+1);
+                        scanf("%d",&arr[i]);
+
+        }for(int i=0;i<size;i++){
+
+                for(int j=0;j<size;j++){
+
+                        if((arr[i]==arr[j])&&(i!=j)) flag=1;
+                }if(flag==1){
+
+                        printf("First repeated element: %d\n",arr[i]);
+                        break;
+                }
+        }if(flag==0) printf("No elements are repeated\n");
+}
