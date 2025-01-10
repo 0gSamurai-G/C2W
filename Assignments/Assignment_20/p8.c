@@ -16,6 +16,7 @@ void main(){
                 if(arr[i]<num){
 
                         flag=1;
+                        num=arr[i];
                 }else{
 
                         flag=0;
