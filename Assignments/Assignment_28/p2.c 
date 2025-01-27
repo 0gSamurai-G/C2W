@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+char* mystrcpy(int size,char arr[size],char arr1[size]){
+
+        int index=0;
+        while(arr[index]!='\0'){
+
+                arr1[index]=arr[index];
+                index++;
+        }
+        return arr1;
+}
+
+void main(){
+
+        int size=1,index=0;
+        char ch,arr[size],arr1[size];
+        printf("Enter a string:\n");
+        while((ch=getchar())!='\n'){
+
+                arr[index]=ch;
+                index++;
+                size++;
+        }arr[index]='\0';
+        printf("Copy of string :%s\n",mystrcpy(size,arr,arr1));
+}
