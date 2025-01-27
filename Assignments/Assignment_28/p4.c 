@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+char* mystrupr(int size,char arr[size]){
+
+        int index=0;
+        char temp = 0;
+        while(arr[index]!='\0'){
+
+                if((arr[index]>=97)&&(arr[index]<=122)){
+
+                        temp=arr[index]-32;
+                        arr[index]=temp;
+
+                        index++;
+                }else {index++;}
+
+        }return arr;
+}
+
+void main(){
+
+        int size=1,index=0;
+        char ch,arr[size];
+        printf("Enter a string:\n");
+        while((ch=getchar())!='\n'){
+
+                arr[index]=ch;
+                index++;
+                size++;
+        }printf("Original:%s\n",arr);
+        printf("Upper case:%s\n",mystrupr(size,arr));
+}
