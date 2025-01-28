@@ -45,4 +45,3 @@ void main(){
                 index1++;
         }printf("\n");
 }
-~
