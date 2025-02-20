@@ -1,0 +1,24 @@
+import java.util.*;
+
+class Percent{
+
+        public static void main(String[] args){
+
+                System.out.println("Enter your percentage:");
+                Scanner scan=new Scanner(System.in);
+                double per=scan.nextDouble();
+                if(per>85){
+
+                        System.out.println("Medical");
+                }else if(per<=85 && per>75){
+
+                        System.out.println("Engineering");
+                }else if(per>=65 && per<=75){
+
+                        System.out.println("Pharmacy");
+                }else{
+
+                        System.out.println("UPSC");
+                }
+        }
+}
